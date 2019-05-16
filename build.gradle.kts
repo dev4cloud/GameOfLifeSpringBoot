@@ -28,6 +28,9 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    maven {
+        url = uri("https://mymavenrepo.com/repo/wNFFvG0nRh9xnwHJXqEQ/")
+    }
 }
 
 tasks.withType<Jar> {
@@ -43,7 +46,11 @@ dependencies {
     compile("org.webjars:bootstrap:3.3.7")
     compile("org.webjars:jquery:3.1.0")
     
+    compile("com.ibm.watson.developer_cloud:personality-insights:6.14.2")
+    
     compile("com.ibm.gol:GameOfLifeHdM:1.0.0")
+    
+    compile("com.google.code.gson:gson:2.8.5")
 
     // Use JUnit test framework
     testImplementation("junit:junit:4.12")

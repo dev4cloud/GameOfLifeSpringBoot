@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "GameOfLifeSpringBoot"
-includeBuild("../GameOfLifeHdM")
+//includeBuild("../GameOfLifeHdM")

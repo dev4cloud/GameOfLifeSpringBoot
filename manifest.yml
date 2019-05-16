@@ -1,0 +1,5 @@
+---
+applications:
+  - name: hello-spring-boot2399999993
+    buildpack: java_buildpack
+    path: build/libs/gol-spring-boot-0.0.1.jar

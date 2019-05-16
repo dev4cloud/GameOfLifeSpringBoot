@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: http
+  - port: 8081
+    targetPort: 8081
+    name: management
+  selector:
+    app: spring-boot-app
+  type: ClusterIP
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: spring-boot-ingress
+spec:
+  rules:
+  - host: mycluster-815032.eu-de.containers.appdomain.cloud
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: spring-boot-service
+          servicePort: 8080
+
